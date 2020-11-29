@@ -63,7 +63,7 @@ class App extends React.Component {
       // .then(() => this.getLinks(this.state.userName))
       // Clear the form once the form is submitted
       // eslint-disable-next-line no-unused-vars
-      .then(() => {
+      .then((res) => {
         this.setState({
           userName: "",
           adminRole: "",
@@ -115,9 +115,10 @@ class App extends React.Component {
           <label>Password</label>
           <input
             type="password"
+            name="password"
             placeholder="Login with your password"
+            value={this.password}
             onChange={this.changeHandler}
-            required
           ></input>
           <button type="submit">Log In</button>
         </form>

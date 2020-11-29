@@ -10,19 +10,24 @@ var bcrypt = require("bcrypt");
 
 var _require = require("./database/query"),
     getLinks = _require.getLinks,
-    registerUsers = _require.registerUsers;
+    registerUsers = _require.registerUsers,
+    getRole = _require.getRole;
 
 app.use(express.json()); // connect server to index.html
 
 app.use(express["static"]("./client/dist")); // create a root route
 
 app.get("users/home/:userName", function (req, res) {
-  getLinks(req.params.userName, function (err, data) {
+  getRole(req.params.userName, function (err, data) {
     if (err) {
       console.log("problem getting tasks from server for products");
       res.sendStatus(500);
-    } else {
+    }
+
+    if (data.length > 0) {
       res.send(data);
+    } else {
+      res.send();
     }
   });
 });

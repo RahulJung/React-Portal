@@ -11,10 +11,10 @@ connection.connect(function (err) {
   } else {
     console.log("Connected to the database");
   }
-});
+}); // select links from logIn, adminLinks where logIn.adminRole = adminLinks.adminRole;
 
-var getLinks = function getLinks(userName, callback) {
-  connection.query("SELECT password FROM logIn WHERE userName=?", [userName], function (err, data) {
+var getRole = function getRole(userName, callback) {
+  connection.query("SELECT adminRole FROM logIn WHERE userName=?", [userName], function (err, data) {
     if (err) {
       console.log("problem getting all links in query");
       callback(err, null);
@@ -36,6 +36,6 @@ var registerUsers = function registerUsers(userName, adminRole, password, callba
 };
 
 module.exports = {
-  getLinks: getLinks,
-  registerUsers: registerUsers
+  registerUsers: registerUsers,
+  getRole: getRole
 };

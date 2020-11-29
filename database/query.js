@@ -11,9 +11,11 @@ connection.connect((err) => {
   }
 });
 
-const getLinks = (userName, callback) => {
+// select links from logIn, adminLinks where logIn.adminRole = adminLinks.adminRole;
+
+const getRole = (userName, callback) => {
   connection.query(
-    "SELECT password FROM logIn WHERE userName=?",
+    "SELECT adminRole FROM logIn WHERE userName=?",
     [userName],
     (err, data) => {
       if (err) {
@@ -40,4 +42,4 @@ const registerUsers = (userName, adminRole, password, callback) => {
   );
 };
 
-module.exports = { getLinks, registerUsers };
+module.exports = { registerUsers, getRole };

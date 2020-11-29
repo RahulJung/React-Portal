@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const axios = require("axios");
 const bcrypt = require("bcrypt");
-const { getLinks, registerUsers } = require("./database/query");
+const { getLinks, registerUsers, getRole } = require("./database/query");
 app.use(express.json());
 
 // connect server to index.html
@@ -10,12 +10,15 @@ app.use(express.static("./client/dist"));
 
 // create a root route
 app.get("users/home/:userName", (req, res) => {
-  getLinks(req.params.userName, (err, data) => {
+  getRole(req.params.userName, (err, data) => {
     if (err) {
       console.log("problem getting tasks from server for products");
       res.sendStatus(500);
-    } else {
+    }
+    if (data.length > 0) {
       res.send(data);
+    } else {
+      res.send();
     }
   });
 });
