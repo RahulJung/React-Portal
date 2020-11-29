@@ -11,20 +11,24 @@ connection.connect((err) => {
   }
 });
 
-const getReviewsByID = (Id, callback) => {
-  connection.query("SELECT * FROM reviews WHERE id=?", [Id], (err, data) => {
-    if (err) {
-      console.log("problem getting all reviews in query");
-      callback(err, null);
-    } else {
-      callback(null, data);
+const getLinks = (userName, callback) => {
+  connection.query(
+    "SELECT password FROM logIn WHERE userName=?",
+    [userName],
+    (err, data) => {
+      if (err) {
+        console.log("problem getting all links in query");
+        callback(err, null);
+      } else {
+        callback(null, data);
+      }
     }
-  });
+  );
 };
 
-const postReview = (id, cName, rating, review, callback) => {
+const registerUsers = (userName, adminRole, password, callback) => {
   connection.query(
-    `INSERT INTO reviews (id, cName, rating, review) VALUES ('${id}','${cName}', '${rating}','${review}')`,
+    `INSERT INTO logIn (userName, adminRole, password) VALUES ('${userName}','${adminRole}','${password}')`,
     (err, data) => {
       if (err) {
         console.log("problem posting reviews in query");
@@ -36,4 +40,4 @@ const postReview = (id, cName, rating, review, callback) => {
   );
 };
 
-module.exports = { postReview, getReviewsByID };
+module.exports = { getLinks, registerUsers };
