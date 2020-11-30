@@ -100,3 +100,22 @@ a {
 .wel {
   text-align: center;
 }
+
+.x {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  border: 1px solid #ebebeb;
+  width: 356px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);
+  padding: 24px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.y {
+  padding: 5px;
+}

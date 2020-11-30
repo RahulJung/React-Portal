@@ -11551,9 +11551,12 @@ var Userpage = function Userpage(props) {
   console.log("props from Userpage", props);
 
   if (props.links.length !== 1) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.links ? props.links.map(function (item, idx) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "x"
+    }, props.links ? props.links.map(function (item, idx) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        key: idx
+        key: idx,
+        className: "y"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
         href: "#"
       }, item.links));
@@ -11664,7 +11667,7 @@ function toVal(mix) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "body {\n  font-family: Verdana, Geneva, sans-serif;\n  font-size: 16px;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 10%;\n}\n.innerForm {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nh2 {\n  font-size: 24px;\n  font-weight: 800;\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.userName {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.pwd {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.btn {\n  display: flex;\n  flex-direction: row;\n}\n.reviewBtn {\n  margin: 24px auto 0;\n  width: unset;\n  padding: 11px 24px 10px;\n  font-size: 14px;\n  line-height: 17px;\n  width: auto;\n  background-color: #fffc00;\n  color: #16191c;\n  font-weight: 500;\n  display: block;\n  border-radius: 15px;\n}\n\n.back {\n  margin-top: 10px;\n  margin-left: 47%;\n}\n\n.links {\n  color: #16191c;\n}\n\na {\n  text-decoration: none;\n  color: #16191c;\n}\n\n.Success {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 5%;\n}\n\n.header {\n  font-size: 24px;\n  /* font-weight: 800; */\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.wel {\n  text-align: center;\n}\n", ""]);
+exports.push([module.id, "body {\n  font-family: Verdana, Geneva, sans-serif;\n  font-size: 16px;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 10%;\n}\n.innerForm {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nh2 {\n  font-size: 24px;\n  font-weight: 800;\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.userName {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.pwd {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.btn {\n  display: flex;\n  flex-direction: row;\n}\n.reviewBtn {\n  margin: 24px auto 0;\n  width: unset;\n  padding: 11px 24px 10px;\n  font-size: 14px;\n  line-height: 17px;\n  width: auto;\n  background-color: #fffc00;\n  color: #16191c;\n  font-weight: 500;\n  display: block;\n  border-radius: 15px;\n}\n\n.back {\n  margin-top: 10px;\n  margin-left: 47%;\n}\n\n.links {\n  color: #16191c;\n}\n\na {\n  text-decoration: none;\n  color: #16191c;\n}\n\n.Success {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 5%;\n}\n\n.header {\n  font-size: 24px;\n  /* font-weight: 800; */\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.wel {\n  text-align: center;\n}\n\n.x {\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: rgba(0, 0, 0, 0.04);\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 5%;\n}\n\n.y {\n  padding: 5px;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

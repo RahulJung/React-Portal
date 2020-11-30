@@ -5,11 +5,11 @@ let Userpage = (props) => {
   console.log("props from Userpage", props);
   if (props.links.length !== 1) {
     return (
-      <div>
+      <div className="x">
         {props.links
           ? props.links.map((item, idx) => {
               return (
-                <div key={idx}>
+                <div key={idx} className="y">
                   <a href="#">{item.links}</a>
                 </div>
               );
