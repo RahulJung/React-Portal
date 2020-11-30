@@ -14,7 +14,7 @@ connection.connect(function (err) {
 }); // select links from logIn, adminLinks where logIn.adminRole = adminLinks.adminRole;
 
 var getRole = function getRole(userName, callback) {
-  connection.query("SELECT adminRole FROM logIn WHERE userName=?", [userName], function (err, data) {
+  connection.query("SELECT links FROM adminLinks WHERE adminRole=?", [userName], function (err, data) {
     if (err) {
       console.log("problem getting all links in query");
       callback(err, null);

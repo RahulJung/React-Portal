@@ -15,7 +15,7 @@ connection.connect((err) => {
 
 const getRole = (userName, callback) => {
   connection.query(
-    "SELECT adminRole FROM logIn WHERE userName=?",
+    "SELECT links FROM adminLinks WHERE adminRole=?",
     [userName],
     (err, data) => {
       if (err) {
