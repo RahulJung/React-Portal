@@ -1,7 +1,6 @@
 body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 16px;
-  /* background-color: rgb(232, 240, 254); */
 }
 
 .form {
@@ -73,6 +72,5 @@ h2 {
 }
 
 a {
-  /* text-decoration: none; */
   color: #16191c;
 }

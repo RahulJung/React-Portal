@@ -42,34 +42,6 @@ class Register extends React.Component {
 
   render() {
     return (
-      // <div>
-      //   <form onSubmit={this.submitHandler}>
-      //     <label>User Name</label>
-      //     <input
-      //       name="userName"
-      //       placeholder="Choose a username"
-      //       value={this.userName}
-      //       onChange={this.changeHandler}
-      //     />
-      //     <label>Admin Role</label>
-      //     <input
-      //       name="adminRole"
-      //       placeholder="Enter your role"
-      //       value={this.adminRole}
-      //       onChange={this.changeHandler}
-      //     />
-      //     <label>Password</label>
-      //     <input
-      //       type="password"
-      //       name="password"
-      //       value={this.password}
-      //       placeholder="Choose a password"
-      //       onChange={this.changeHandler}
-      //     ></input>
-      //     <button type="submit">Sign Up</button>
-      //   </form>
-      //   <Link to="/">Log In</Link>
-      // </div>
       <div>
         <div className="form">
           <h2>Register User</h2>

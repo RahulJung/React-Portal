@@ -11211,10 +11211,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomizedDialogs.jsx */ "./client/src/components/CustomizedDialogs.jsx");
-/* harmony import */ var _Success_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Success.jsx */ "./client/src/components/Success.jsx");
-/* harmony import */ var _Userpage_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Userpage.jsx */ "./client/src/components/Userpage.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Success_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Success.jsx */ "./client/src/components/Success.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -11238,8 +11236,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
 
 
 
@@ -11323,11 +11319,11 @@ var Login = /*#__PURE__*/function (_React$Component) {
         onClick: this.getLinks
       }, "Log In"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "back"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
         to: "/Register"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
         className: "link"
-      }, "Create Account"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Success_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {
+      }, "Create Account"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Success_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
         links: this.state.links
       }));
     }
@@ -11437,74 +11433,43 @@ var Register = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return (
-        /*#__PURE__*/
-        // <div>
-        //   <form onSubmit={this.submitHandler}>
-        //     <label>User Name</label>
-        //     <input
-        //       name="userName"
-        //       placeholder="Choose a username"
-        //       value={this.userName}
-        //       onChange={this.changeHandler}
-        //     />
-        //     <label>Admin Role</label>
-        //     <input
-        //       name="adminRole"
-        //       placeholder="Enter your role"
-        //       value={this.adminRole}
-        //       onChange={this.changeHandler}
-        //     />
-        //     <label>Password</label>
-        //     <input
-        //       type="password"
-        //       name="password"
-        //       value={this.password}
-        //       placeholder="Choose a password"
-        //       onChange={this.changeHandler}
-        //     ></input>
-        //     <button type="submit">Sign Up</button>
-        //   </form>
-        //   <Link to="/">Log In</Link>
-        // </div>
-        react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "form"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Register User"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "innerForm"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "userName"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "User Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-          name: "userName",
-          placeholder: "Login with your username",
-          value: this.userName,
-          onChange: this.changeHandler
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "userName"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Admin Role"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-          name: "adminRole",
-          placeholder: "Enter your role",
-          value: this.adminRole,
-          onChange: this.changeHandler
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "pwd"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-          type: "password",
-          name: "password",
-          placeholder: "Login with your password",
-          value: this.password,
-          onChange: this.changeHandler,
-          required: true
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-          className: "reviewBtn",
-          onClick: this.submitHandler
-        }, "Sign Up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-          className: "back"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-          to: "/"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-          className: "links"
-        }, "Back To Login"))))
-      );
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Register User"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "innerForm"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "userName"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "User Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        name: "userName",
+        placeholder: "Login with your username",
+        value: this.userName,
+        onChange: this.changeHandler
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "userName"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Admin Role"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        name: "adminRole",
+        placeholder: "Enter your role",
+        value: this.adminRole,
+        onChange: this.changeHandler
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "pwd"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+        type: "password",
+        name: "password",
+        placeholder: "Login with your password",
+        value: this.password,
+        onChange: this.changeHandler,
+        required: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+        className: "reviewBtn",
+        onClick: this.submitHandler
+      }, "Sign Up"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "back"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: "/"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+        className: "links"
+      }, "Back To Login"))));
     }
   }]);
 
@@ -11531,10 +11496,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Userpage_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Userpage.jsx */ "./client/src/components/Userpage.jsx");
-/* harmony import */ var _CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomizedDialogs.jsx */ "./client/src/components/CustomizedDialogs.jsx");
-
-
+/* harmony import */ var _CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CustomizedDialogs.jsx */ "./client/src/components/CustomizedDialogs.jsx");
 
 
 
@@ -11542,7 +11504,7 @@ var Success = function Success(props) {
   console.log("props", props.links.length);
 
   if (props.links.length !== 1) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.links ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Success"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.links ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Success"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
       reviews: props.links
     })) : "");
   } else {
@@ -11680,13 +11642,17 @@ function toVal(mix) {
   \****************************************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: __webpack_exports__, module, __webpack_require__, module.id */
+/*! CommonJS bailout: exports is used directly at 3:0-7 */
+/*! CommonJS bailout: exports.push(...) prevents optimization as exports is passed as call context at 5:0-12 */
+/*! CommonJS bailout: exports is used directly at 7:17-24 */
+/*! CommonJS bailout: module.exports is used directly at 7:0-14 */
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "body {\n  font-family: Verdana, Geneva, sans-serif;\n  font-size: 16px;\n  /* background-color: rgb(232, 240, 254); */\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 10%;\n}\n.innerForm {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nh2 {\n  font-size: 24px;\n  font-weight: 800;\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.userName {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.pwd {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.btn {\n  display: flex;\n  flex-direction: row;\n}\n.reviewBtn {\n  margin: 24px auto 0;\n  width: unset;\n  padding: 11px 24px 10px;\n  font-size: 14px;\n  line-height: 17px;\n  width: auto;\n  background-color: #fffc00;\n  color: #16191c;\n  font-weight: 500;\n  display: block;\n  border-radius: 15px;\n}\n\n.back {\n  margin-top: 10px;\n  margin-left: 47%;\n}\n\n.links {\n  text-decoration: none;\n  color: #16191c;\n}\n\na {\n  /* text-decoration: none; */\n  color: #16191c;\n}\n", ""]);
+exports.push([module.id, "body {\n  font-family: Verdana, Geneva, sans-serif;\n  font-size: 16px;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 10%;\n}\n.innerForm {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nh2 {\n  font-size: 24px;\n  font-weight: 800;\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.userName {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.pwd {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.btn {\n  display: flex;\n  flex-direction: row;\n}\n.reviewBtn {\n  margin: 24px auto 0;\n  width: unset;\n  padding: 11px 24px 10px;\n  font-size: 14px;\n  line-height: 17px;\n  width: auto;\n  background-color: #fffc00;\n  color: #16191c;\n  font-weight: 500;\n  display: block;\n  border-radius: 15px;\n}\n\n.back {\n  margin-top: 10px;\n  margin-left: 47%;\n}\n\n.links {\n  text-decoration: none;\n  color: #16191c;\n}\n\na {\n  color: #16191c;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

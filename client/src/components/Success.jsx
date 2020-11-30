@@ -1,7 +1,5 @@
 import React from "react";
-import Userpage from "./Userpage.jsx";
 import CustomizedDialogs from "./CustomizedDialogs.jsx";
-import { Link } from "react-router-dom";
 
 let Success = (props) => {
   console.log("props", props.links.length);

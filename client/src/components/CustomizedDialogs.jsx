@@ -80,16 +80,6 @@ export default function CustomizedDialogs({ reviews }) {
           <Typography gutterBottom>
             You have access to the following links
           </Typography>
-          {/* <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography> */}
           <Userpage links={reviews} />
         </DialogContent>
         <DialogActions>
