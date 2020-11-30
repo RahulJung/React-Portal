@@ -72,7 +72,7 @@ class Register extends React.Component {
       // </div>
       <div>
         <div className="form">
-          <h2>Admin Login</h2>
+          <h2>Register User</h2>
           <div className="innerForm">
             <div className="userName">
               <label>User Name</label>
@@ -105,7 +105,7 @@ class Register extends React.Component {
             </div>
 
             <button className="reviewBtn" onClick={this.submitHandler}>
-              Log In
+              Sign Up
             </button>
           </div>
         </div>

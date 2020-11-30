@@ -11,7 +11,7 @@ let App = () => {
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/Register" exact component={Register} />
-        <Route path="/home/:userName" exact component={Userpage} />
+        <Route path="/home" exact component={Userpage} />
       </Switch>
     </Router>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import CustomizedDialogs from "./CustomizedDialogs.jsx";
+import Success from "./Success.jsx";
 import Userpage from "./Userpage.jsx";
 
 class Login extends React.Component {
@@ -72,14 +74,16 @@ class Login extends React.Component {
             <button className="reviewBtn" onClick={this.getLinks}>
               Log In
             </button>
-            <Userpage links={this.state.links} />
           </div>
         </div>
         <div className="back">
           <Link to="/Register">
-            <span className="links">Create Account</span>
+            <span className="link">Create Account</span>
           </Link>
         </div>
+        {/* <Userpage links={this.state.links} /> */}
+        {/* <CustomizedDialogs reviews={this.state.links} /> */}
+        <Success links={this.state.links} />
       </div>
     );
   }

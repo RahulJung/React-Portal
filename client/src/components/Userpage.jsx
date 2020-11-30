@@ -2,13 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 let Userpage = (props) => {
-  console.log("props", props.links.length);
+  console.log("props from Userpage", props);
   if (props.links.length !== 1) {
     return (
       <div>
         {props.links
           ? props.links.map((item, idx) => {
-              return <div key={idx}>{item.links}</div>;
+              return (
+                <div key={idx}>
+                  <a href="#">{item.links}</a>
+                </div>
+              );
             })
           : ""}
       </div>
