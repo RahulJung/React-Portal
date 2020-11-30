@@ -11076,6 +11076,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
 /* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/Typography.js");
 /* harmony import */ var _Userpage_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Userpage.jsx */ "./client/src/components/Userpage.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -11093,6 +11094,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -11178,17 +11180,23 @@ function CustomizedDialogs(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DialogTitle, {
     id: "customized-dialog-title",
     onClose: handleClose
-  }, "Welcome ", reviews.userName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DialogContent, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "wel"
+  }, " Welcome "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, reviews.userName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DialogContent, {
     dividers: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__.default, {
     gutterBottom: true
-  }, "You have access to the following links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Userpage_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "header"
+  }, "You have access to the following links")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Userpage_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
     links: reviews
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DialogActions, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_9__.default, {
     autoFocus: true,
     onClick: handleClose,
     color: "primary"
-  }, "Log Out"))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link, {
+    to: "/Register"
+  }, " Log Out")))));
 }
 
 /***/ }),
@@ -11504,11 +11512,15 @@ var Success = function Success(props) {
   console.log("props", props.links.length);
 
   if (props.links.length !== 1) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.links ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Success"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, props.links ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "Success"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Success"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CustomizedDialogs_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
       reviews: props.links
     })) : "");
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Incorrect Username or Password");
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "Success"
+    }, "Incorrect Username or Password");
   }
 };
 
@@ -11652,7 +11664,7 @@ function toVal(mix) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "body {\n  font-family: Verdana, Geneva, sans-serif;\n  font-size: 16px;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 10%;\n}\n.innerForm {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nh2 {\n  font-size: 24px;\n  font-weight: 800;\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.userName {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.pwd {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.btn {\n  display: flex;\n  flex-direction: row;\n}\n.reviewBtn {\n  margin: 24px auto 0;\n  width: unset;\n  padding: 11px 24px 10px;\n  font-size: 14px;\n  line-height: 17px;\n  width: auto;\n  background-color: #fffc00;\n  color: #16191c;\n  font-weight: 500;\n  display: block;\n  border-radius: 15px;\n}\n\n.back {\n  margin-top: 10px;\n  margin-left: 47%;\n}\n\n.links {\n  text-decoration: none;\n  color: #16191c;\n}\n\na {\n  color: #16191c;\n}\n", ""]);
+exports.push([module.id, "body {\n  font-family: Verdana, Geneva, sans-serif;\n  font-size: 16px;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 10%;\n}\n.innerForm {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nh2 {\n  font-size: 24px;\n  font-weight: 800;\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.userName {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.pwd {\n  display: flex;\n  flex-direction: column;\n  margin: 24px auto 0;\n  width: unset;\n}\n\n.btn {\n  display: flex;\n  flex-direction: row;\n}\n.reviewBtn {\n  margin: 24px auto 0;\n  width: unset;\n  padding: 11px 24px 10px;\n  font-size: 14px;\n  line-height: 17px;\n  width: auto;\n  background-color: #fffc00;\n  color: #16191c;\n  font-weight: 500;\n  display: block;\n  border-radius: 15px;\n}\n\n.back {\n  margin-top: 10px;\n  margin-left: 47%;\n}\n\n.links {\n  color: #16191c;\n}\n\na {\n  text-decoration: none;\n  color: #16191c;\n}\n\n.Success {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background: #ffffff;\n  border-radius: 6px;\n  border: 1px solid #ebebeb;\n  width: 356px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);\n  padding: 24px;\n  margin: auto;\n  margin-top: 5%;\n}\n\n.header {\n  font-size: 24px;\n  /* font-weight: 800; */\n  text-align: center;\n  color: #16191c;\n  margin-top: 12px;\n}\n\n.wel {\n  text-align: center;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

@@ -9,6 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 import Userpage from "./Userpage.jsx";
+import { Link } from "react-router-dom";
 
 const styles = (theme) => ({
   root: {
@@ -74,17 +75,18 @@ export default function CustomizedDialogs({ reviews }) {
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Welcome {reviews.userName}
+          <div className="wel"> Welcome </div>
+          <div>{reviews.userName}</div>
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            You have access to the following links
+            <div className="header">You have access to the following links</div>
           </Typography>
           <Userpage links={reviews} />
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose} color="primary">
-            Log Out
+            <Link to="/Register"> Log Out</Link>
           </Button>
         </DialogActions>
       </Dialog>

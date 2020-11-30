@@ -7,7 +7,7 @@ let Success = (props) => {
     return (
       <div>
         {props.links ? (
-          <div>
+          <div className="Success">
             <div>Success</div>
             <CustomizedDialogs reviews={props.links} />
           </div>
@@ -17,7 +17,7 @@ let Success = (props) => {
       </div>
     );
   } else {
-    return <div>Incorrect Username or Password</div>;
+    return <div className="Success">Incorrect Username or Password</div>;
   }
 };
 
